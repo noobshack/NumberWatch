@@ -1,8 +1,9 @@
 var crunchNumbers = function () {
 
-	var battletag = document.getElementById('battletag').value
-	var region = document.getElementById('region').value
-	var platform = document.getElementById('platform').value
+	var blard = 'works';
+	var battletag = document.getElementById('battletag').value;
+	var region = document.getElementById('region').value;
+	var platform = document.getElementById('platform').value;
 
 	var url = "https://ow-api.com/v1/stats/" + platform + "/" + region + "/" + battletag + "/profile";
 
