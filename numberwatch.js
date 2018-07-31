@@ -1,6 +1,6 @@
 var crunchNumbers = function () {
 
-	var blard = 'works';
+	var blard = 'testing';
 	var battletag = document.getElementById('battletag').value;
 	var region = document.getElementById('region').value;
 	var platform = document.getElementById('platform').value;
