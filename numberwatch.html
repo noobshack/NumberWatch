@@ -3,20 +3,71 @@
 	<link rel="stylesheet" type="text/css" href="numberwatch.css">
 </head>
 <body>
-	<div class="container" id="nameContainer">
-		<h3 class="title">ESHQ's NumberWatch!</h3>
-		<h3>Inputs</h3>
-		<h4>name<h4><input  id="battletag" class="nameInput textBox" type="text">
-		<h4>region<h4><input  id="region" class="nameInput textBox" type="text">
-		<h4>platform<h4><input  id="platform" class="nameInput textBox" type="text">
-		<input id="input1" class="nameInput textBox" type="text" name="humanNames[]">
-		<input  id="input2" class="nameInput textBox" type="text" name="humanNames[]">
+	<h3 class="title">ESHQ's NumberWatch!</h3>
+
+
+	<ul class="tabrow">
+		<button id="manual" class="selected" onclick="tabChange('manual')" type="button">Manual Entry</button>
+	 	<button id="auto" onclick="tabChange('auto')" type="button">Auto Lookup</button>
+	</ul>
+
+	<div id="manualContainer">
+		<div class="container" id="nameContainer">
+			<h3>Inputs</h3>
+
+
+			<div class="numberwatchInput">Dmg Per 10min<input id="dmgp10" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">Barrier Dmg Per 10 min<input  id="barrierdmgp10" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">Elim Per 10min<input id="elimp10" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">Solo Elim Per 10min<input id="soloelimp10" class="input textBox" type="text"></div>
+
+			<div class="numberwatchInput">Accuracy %<input id="acc" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">Crit %<input id="crit" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">Quick melee %<input id="qmelee" class="input textBox" type="text"></div>
+
+
+			<div class="numberwatchInput">Deaths<input id="deaths" class="input textBox" type="text"></div>
+
+			<div class="numberwatchInput">Healing per 10<input id="healingp10" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">Rez per 10<input id="rezp10" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">Defensive Assist Per 10<input id="defassp10" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">Offensive Assist Per 10<input id="offassper10" class="input textBox" type="text"></div>
+
+			<div class="numberwatchInput">Damage Blocked Per 10<input id="dmgblckedp10" class="input textBox" type="text"></div>
+		</div>
+
+
+		<div class="containerResults">
+			<h3>Results</h3>
+			<p id="results"></p>
+
+		</div>
+
+
+		<div>
+			<button class="button" onclick="crunchNumbers()" type="button">Crunch Numbers</button>
+		</div>
 	</div>
 
+	<div class="hidden" id="autoContainer">
+		<div class="container">
+			<h3>Inputs</h3>
+			<div class="numberwatchInput">Name<input placeholder="name-####"  id="battletag" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">Region<input placeholder="us, eu, asia" id="region" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">Platform<input placeholder="pc, xbox" id="platform" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">Heroes<input placeholder="mccree, hanzo" id="heroes" class="input textBox" type="text"></div>
+		</div>
 
-	<p id="demo"></p>
+		<div class="containerResults">
+			<h3>Results</h3>
+			<p id="results"></p>
 
-	<button class="button createTeam" onclick="crunchNumbers()" type="button">Crunch Numbers</button>
+		</div>
+
+		<div>
+			<button class="button" onclick="crunchNumbers()" type="button">Crunch Numbers</button>
+		</div>
+	</div>
 
 	<script src="numberwatch.js"></script>
 </body>
