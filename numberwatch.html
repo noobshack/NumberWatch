@@ -15,31 +15,40 @@
 		<div class="container" id="nameContainer">
 			<h3>Inputs</h3>
 
+			<div class="numberwatchInput">
+				<h4>General Stats</h4>
+				<div class="numberwatchInput">Deaths<input id="deaths" class="input textBox" type="text"></div>
+				<div class="numberwatchInput">Defensive Assist Per 10<input id="defassp10" class="input textBox" type="text"></div>
+				<div class="numberwatchInput">Offensive Assist Per 10<input id="offassper10" class="input textBox" type="text"></div>
+			</div>
 
-			<div class="numberwatchInput">Dmg Per 10min<input id="dmgp10" class="input textBox" type="text"></div>
-			<div class="numberwatchInput">Barrier Dmg Per 10 min<input  id="barrierdmgp10" class="input textBox" type="text"></div>
-			<div class="numberwatchInput">Elim Per 10min<input id="elimp10" class="input textBox" type="text"></div>
-			<div class="numberwatchInput">Solo Elim Per 10min<input id="soloelimp10" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">
+				<h4>DPS Stats</h4>
+				<div class="numberwatchInput">Dmg Per 10min<input id="dmgp10" class="input textBox" type="text"></div>
+				<div class="numberwatchInput">Barrier Dmg Per 10 min<input  id="barrierdmgp10" class="input textBox" type="text"></div>
+				<div class="numberwatchInput">Elim Per 10min<input id="elimp10" class="input textBox" type="text"></div>
+				<div class="numberwatchInput">Solo Elim Per 10min<input id="soloelimp10" class="input textBox" type="text"></div>
+				<div class="numberwatchInput">Accuracy %<input id="acc" class="input textBox" type="text"></div>
+				<div class="numberwatchInput">Crit %<input id="crit" class="input textBox" type="text"></div>
+				<div class="numberwatchInput">Quick melee %<input id="qmelee" class="input textBox" type="text"></div>
+			</div>
 
-			<div class="numberwatchInput">Accuracy %<input id="acc" class="input textBox" type="text"></div>
-			<div class="numberwatchInput">Crit %<input id="crit" class="input textBox" type="text"></div>
-			<div class="numberwatchInput">Quick melee %<input id="qmelee" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">
+				<h4>Support Stats</h4>
+				<div class="numberwatchInput">Healing per 10<input id="healingp10" class="input textBox" type="text"></div>
+				<div class="numberwatchInput">Rez per 10<input id="rezp10" class="input textBox" type="text"></div>
+			</div>
 
-
-			<div class="numberwatchInput">Deaths<input id="deaths" class="input textBox" type="text"></div>
-
-			<div class="numberwatchInput">Healing per 10<input id="healingp10" class="input textBox" type="text"></div>
-			<div class="numberwatchInput">Rez per 10<input id="rezp10" class="input textBox" type="text"></div>
-			<div class="numberwatchInput">Defensive Assist Per 10<input id="defassp10" class="input textBox" type="text"></div>
-			<div class="numberwatchInput">Offensive Assist Per 10<input id="offassper10" class="input textBox" type="text"></div>
-
-			<div class="numberwatchInput">Damage Blocked Per 10<input id="dmgblckedp10" class="input textBox" type="text"></div>
+			<div class="numberwatchInput">
+				<h4>Tank Stats</h4>
+				<div class="numberwatchInput">Damage Blocked Per 10<input id="dmgblckedp10" class="input textBox" type="text"></div>
+			</div>
 		</div>
 
 
 		<div class="containerResults">
 			<h3>Results</h3>
-			<p id="results"></p>
+			<div class="numberwatchInput"></div>
 
 		</div>
 
@@ -65,7 +74,7 @@
 		</div>
 
 		<div>
-			<button class="button" onclick="crunchNumbers()" type="button">Crunch Numbers</button>
+			<button class="button" onclick="crunchNumbers(true)" type="button">Crunch Numbers</button>
 		</div>
 	</div>
 

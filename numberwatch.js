@@ -1,6 +1,7 @@
 var crunchNumbers = function (manual) {
 
 	var completeDisp = {};
+	var playerNumbers = [];
 
 	if (manual) {
 		var battletag = document.getElementById('battletag').value;
@@ -20,19 +21,22 @@ var crunchNumbers = function (manual) {
 	  xhttp.send();
 	}
 
-	var dmgp10 = document.getElementById('dmgp10').value;
-	var barrierdmgp10 = document.getElementById('barrierdmgp10').value;
-	var elimp10 = document.getElementById('elimp10').value;
-	var soloelimp10 = document.getElementById('soloelimp10').value;
-	var acc = document.getElementById('acc').value;
-	var crit = document.getElementById('crit').value;
-	var qmelee = document.getElementById('qmelee').value;
-	var deaths = document.getElementById('deaths').value;
-	var healingp10 = document.getElementById('healingp10').value;
-	var rezp10 = document.getElementById('rezp10').value;
-	var defassp10 = document.getElementById('defassp10').value;
-	var offassper10 = document.getElementById('offassper10').value;
-	var dmgblckedp10 = document.getElementById('dmgblckedp10').value;
+	if (!manual) {
+		playerNumbers.push(document.getElementById('dmgp10').value);
+		playerNumbers.push(document.getElementById('barrierdmgp10').value);
+		playerNumbers.push(document.getElementById('elimp10').value);
+		playerNumbers.push(document.getElementById('soloelimp10').value);
+		playerNumbers.push(document.getElementById('acc').value);
+		playerNumbers.push(document.getElementById('crit').value);
+		playerNumbers.push(document.getElementById('qmelee').value);
+		playerNumbers.push(document.getElementById('deaths').value);
+		playerNumbers.push(document.getElementById('healingp10').value);
+		playerNumbers.push(document.getElementById('rezp10').value);
+		playerNumbers.push(document.getElementById('defassp10').value);
+		playerNumbers.push(document.getElementById('offassper10').value);
+		playerNumbers.push(document.getElementById('dmgblckedp10').value);
+		console.log(playerNumbers);
+	}
 }
 
 
